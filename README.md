@@ -1,71 +1,147 @@
-# Linear-Regression
+# Linear Regression with Advertising Dataset
 
-# 📊 Linear Regression with Advertising Dataset
+## 📌 Project Overview
 
-This project demonstrates how to implement both **Simple** and **Multiple Linear Regression** using Python and Scikit-learn.  
-The dataset contains advertising spends (TV, Radio, Newspaper) and their impact on product Sales.
+This project demonstrates the implementation of Simple and Multiple Linear Regression using Python and Scikit-learn.
 
----
+The project uses an Advertising Dataset to analyze how advertising budgets across TV, Radio, and Newspaper channels relate to product Sales.
 
-## 🎯 Objective
+The objective is to build regression models, make predictions, evaluate model performance, and understand the relationship between advertising expenditure and sales.
 
-- Understand and visualize how ad budgets affect sales.
-- Learn to build, train, and evaluate linear regression models.
-- Compare simple regression (one feature) with multiple regression (all features).
+## 🎯 Project Objectives
 
----
+- Understand the fundamentals of Linear Regression.
+- Explore the relationship between advertising budgets and sales.
+- Implement Simple Linear Regression using TV advertising.
+- Implement Multiple Linear Regression using all advertising channels.
+- Evaluate regression models using performance metrics.
+- Compare the performance of simple and multiple regression models.
 
-## 🧰 Tools & Libraries
+## 📂 Dataset Information
 
-- Python 3.x
+**Dataset:** `advertising_sales.csv`
+
+The dataset contains 200 records and 4 columns.
+
+| Column | Description |
+|---|---|
+| TV | TV advertising budget |
+| Radio | Radio advertising budget |
+| Newspaper | Newspaper advertising budget |
+| Sales | Product sales |
+
+## 🛠️ Technologies & Libraries
+
+- Python
 - Pandas
 - NumPy
-- Scikit-learn
 - Matplotlib
+- Scikit-learn
+- Jupyter Notebook
 
----
+## ⚙️ Project Workflow
 
-## 📁 Dataset
+### 1. Data Loading and Exploration
+- Imported the dataset using Pandas.
+- Explored the dataset using `head()` and `info()`.
+- Checked data types and missing values.
 
-- File: `advertising_sales.csv`
-- Columns:
-  - `TV`: Advertising budget for TV (in thousands)
-  - `Radio`: Advertising budget for Radio
-  - `Newspaper`: Advertising budget for Newspaper
-  - `Sales`: Resulting product sales
+### 2. Simple Linear Regression
+- Selected TV advertising as the independent variable.
+- Selected Sales as the dependent variable.
+- Split the dataset into training and testing sets.
+- Trained a Linear Regression model.
+- Generated predictions.
 
----
+### 3. Multiple Linear Regression
+- Used TV, Radio, and Newspaper as independent variables.
+- Used Sales as the target variable.
+- Trained a multiple regression model.
+- Generated sales predictions.
 
-## 🔍 What I Did (Step-by-step)
+### 4. Model Evaluation
 
-1. **Imported the dataset** and explored the structure
-2. **Split the data** into training and testing sets
-3. **Built a Simple Linear Regression** model (TV → Sales)
-4. **Visualized the regression line** and understood coefficients
-5. **Built a Multiple Linear Regression** model (TV, Radio, Newspaper → Sales)
-6. **Evaluated both models** using MAE, MSE, RMSE, and R² scores
-7. **Compared the results** of simple vs. multiple regression
+The models are evaluated using:
 
----
+- **MAE:** Mean Absolute Error
+- **MSE:** Mean Squared Error
+- **RMSE:** Root Mean Squared Error
+- **R² Score:** Coefficient of Determination
 
-## 📈 Key Outputs
+## 📈 Simple Linear Regression Results
 
-| Model                  | R² Score | RMSE     |
-|------------------------|----------|----------|
-| Simple Linear (TV)     | ~0.85    | Moderate |
-| Multiple Linear (All)  | ~0.99    | Very Low |
+| Metric | Result |
+|---|---:|
+| MAE | 64.96 |
+| MSE | 6432.56 |
+| RMSE | 80.20 |
+| R² Score | 0.8343 |
 
-- TV spend alone explains ~85% of the variation in sales.
-- Combining all three ad channels explains almost 99%!
+The Simple Linear Regression model uses TV advertising expenditure to predict product sales.
 
----
+## 📁 Project Structure
 
-## ▶️ How to Run
+```text
+Linear-Regression/
+│
+├── Linear Regression-checkpoint.ipynb
+├── advertising_sales.csv
+└── README.md
+```
 
-1. Clone the repository or copy the `.ipynb` notebook.
-2. Place `advertising_sales.csv` in the same folder.
-3. Run all cells in the notebook.
+## 🚀 How to Run the Project
+
+**1. Clone the repository**
 
 ```bash
-pip install pandas numpy scikit-learn matplotlib
-jupyter notebook Linear_Regression_Advertising.ipynb
+git clone https://github.com/yashika85/Linear-Regression.git
+```
+
+**2. Navigate to the project folder**
+
+```bash
+cd Linear-Regression
+```
+
+**3. Install the required libraries**
+
+```bash
+pip install pandas numpy matplotlib scikit-learn jupyter
+```
+
+**4. Open Jupyter Notebook**
+
+```bash
+jupyter notebook
+```
+
+**5.** Open the Linear Regression notebook and run all cells.
+
+*Note: Keep the CSV dataset in the project folder and update the file path in the notebook if required.*
+
+## 📚 Key Learnings
+
+- Understanding Simple and Multiple Linear Regression.
+- Training and testing machine learning models.
+- Understanding independent and dependent variables.
+- Making predictions using Scikit-learn.
+- Evaluating regression models using statistical metrics.
+- Interpreting regression coefficients and model performance.
+
+## 🔮 Future Improvements
+
+- Add actual vs. predicted value visualizations.
+- Analyze residuals to understand prediction errors.
+- Compare regression models using a results table.
+- Experiment with additional regression algorithms.
+
+## 👩‍💻 Author
+
+**Yashika Khan**
+
+- GitHub: https://github.com/yashika85
+- LinkedIn: https://www.linkedin.com/in/yashika-khan-43609832b/
+
+---
+
+⭐ If you find this project useful, feel free to explore the repository.
